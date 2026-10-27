@@ -1,0 +1,22 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: bonnco-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: bonnco
+      MYSQL_ROOT_PASSWORD: bonnco_root_pw
+      MYSQL_USER: bonnco
+      MYSQL_PASSWORD: bonnco_pw
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pbonnco_root_pw"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  mysql-data:

@@ -1,0 +1,21 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pymysql==1.1.1
+cryptography==43.0.1
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-dotenv==1.0.1
+httpx==0.28.1
+websockets==13.1
+pandas==3.0.5
+pandas-ta==0.4.71b0
+numpy==2.2.6
+openai==3.2.0
+google-genai==2.18.1
+feedparser==6.0.14
+apscheduler==3.10.4
+
+# Dev/test only
+pytest==9.1.1
+pytest-cov==7.1.0

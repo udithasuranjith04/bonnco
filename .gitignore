@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+npm-debug.log*
+
+# MySQL data volume
+mysql-data/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #0b0f17;
+  color: #e6e9f0;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes bonncoMsgIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bonncoTypingDot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.bonnco-msg-in {
+  animation: bonncoMsgIn 220ms ease both;
+}
+
+.bonnco-typing-dot {
+  animation: bonncoTypingDot 1.2s ease-in-out infinite;
+}
+
+@keyframes bonncoLivePulse {
+  0% {
+    box-shadow: 0 0 0 0 currentColor;
+    opacity: 1;
+  }
+  70% {
+    box-shadow: 0 0 0 5px transparent;
+    opacity: 0.7;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+    opacity: 1;
+  }
+}
+
+.bonnco-live-dot {
+  animation: bonncoLivePulse 2s ease-out infinite;
+}
+
+@keyframes bonncoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bonnco-spin {
+  animation: bonncoSpin 900ms linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bonnco-msg-in {
+    animation: none;
+  }
+  .bonnco-typing-dot {
+    animation: none;
+    opacity: 0.7;
+  }
+  .bonnco-live-dot {
+    animation: none;
+  }
+  .bonnco-spin {
+    animation: none;
+  }
+}
